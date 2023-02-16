@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+      <title>Check My Plant</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      html, body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+      }
+      .hero {
+          height: 100%;
+      }
+  </style>
+  </head>
+    
+<body>
+
+<section class="hero is-fullheight" has-background-black>
+    <body style="background-color:rgb(78, 124, 60)">
+    <section class="section">
+        <div class="container" >
+            <h1 class="title" style="font-size:2.5rem">
+                <img src="/static/logo-image.jpg" width="40%" alt="logo"></a>
+            </h1>
+        </div>   
+        </section>
+        <div class="columns">
+                <div class="column is-narrow">
+                </div>
+
+                <div class="column is-one-third has-text-centered">
+                    <img class="pred_img" src="{{ url_for('send_file', filename=imagefile)}}"/>
+                                    </div>
+                <div class="column is-one-quarter" style="font-size:2.5rem" >
+      
+                        <h2 id ="pred" style="color:white">
+                            This is a <span style="font-weight: bold; color:whitesmoke;">{{ label }}</span>
+                        </h2>
+            
+                        <h2 style="font-size: 3rem">
+                          Prediction: <span style="font-weight: bold; color:white;">{{prob}}%</span>
+                        </h2>
+                        <br>
+                        <a href="/" class="button is-black is-inverted is-outlined" style="font-size:2.5rem; color:rgb(237, 16, 16);">Back</a>
+                    </div>
+            </div>
+    <section class="hero is-fullheight has-background-black">
+            <div class="container">
+            </div>   
+            </section> 
+
+</body>
+</html>

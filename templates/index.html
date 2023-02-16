@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Check My Plant</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+    
+<body>
+
+<section class="hero is-fullheight" has-background-black>
+    <body style="background-color:rgb(78, 124, 60);">
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+              <img src="/static/logo-image.jpg" width="75%" alt="logo"></a>
+            </h1>
+        </div>   
+        </section>
+    <section class="section">
+        <div class="container has-text-centered bg-text" style="width: 100%; font-size:2.5rem; color:rgb(237, 16, 16);">
+              <div>
+                <i class="arrow_down"></i>
+                <form action="/classify" method="post" enctype="multipart/form-data" style="margin-top: 30px; width: 80%; text-align: center; margin: auto;">
+                  <div class="file has-name is-centered">     
+                      <label class="file-label">
+                        <input class="file-input" type="file" id="image" name = "image" style="font-size:2.5rem; color:rgb(237, 16, 16);">
+                      </label>
+                    </div>
+                    <br>
+                    <input type="submit" value="Recognition" class="button is-black" name = "image" id="classify_button" style="font-size:2.5rem; color:rgb(237, 16, 16);">
+                </form>
+      
+                </div>
+               
+              </div>
+            </div>
+        </div>
+</section>
+
+
+
+
+</body>
+</html>

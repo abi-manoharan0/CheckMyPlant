@@ -1,11 +1,12 @@
-html,body {
+/* html,body {
     margin-right: auto;
     margin-left: auto;
     width: 980px;
-}
-
-.title {
-    margin-bottom: 50px;
+} */
+.content {
+    margin-right: auto;
+    margin-left: auto;
+    width: 980px;
 }
 
 #title {
@@ -13,4 +14,10 @@ html,body {
     margin-right: auto;
     margin-left: auto;
     display: block;
+}
+
+#header {
+    padding-bottom: 50px; 
+    margin-bottom: 20px;
+    background-image: linear-gradient(rgba(78, 124, 60), rgba(78, 124, 60),rgba(78, 124, 60),rgba(78, 124, 60), white);
 }

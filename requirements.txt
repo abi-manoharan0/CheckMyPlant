@@ -26,6 +26,7 @@ pylint==2.5.3
 pyparsing==2.4.7
 python-dateutil
 pytz
+gunicorn==20.1.0
 requests==2.25.1
 scipy
 shortuuid==1.0.1

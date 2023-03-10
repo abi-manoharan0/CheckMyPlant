@@ -1,6 +1,5 @@
 Flask==2.1.1
 numpy==1.21.2
-Pillow==8.3.1
 asgiref
 astroid==2.4.2
 autopep8==1.5.4
@@ -21,6 +20,7 @@ matplotlib
 mccabe==0.6.1
 mysql-connector-python==8.0.23
 olefile
+Pillow
 pathtools==0.1.2
 protobuf==3.15.3
 psycopg2

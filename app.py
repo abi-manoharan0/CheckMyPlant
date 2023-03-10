@@ -3,6 +3,12 @@ import os
 import tensorflow as tf
 from flask import Flask, render_template, request, send_from_directory
 from PIL import Image
+from tensorflow.keras.applications.resnet50 import preprocess_input
+from tensorflow.keras.preprocessing import image
+import numpy as np
+
+
+
 
 app = Flask(__name__)
 
@@ -28,8 +34,24 @@ def load(path):
     return preprocess(image)
 
 
+# Add a pre-screenr to catch image that doesn't belong to the class
+# Load pre-trained ResNet50 model
+pre_trained_model = tf.keras.applications.ResNet50(weights='imagenet')
+
+# Define a function to preprocess the image and predict the class using the pre-trained model
+def predict_image(image_path):
+    img = image.load_img(image_path, target_size=(224, 224))
+    x = image.img_to_array(img)
+    x = np.expand_dims(x, axis=0)
+    x = preprocess_input(x)
+    preds = pre_trained_model.predict(x)
+    return tf.keras.applications.resnet50.decode_predictions(preds, top=1)[0][0][1]
+
 # Predict & classify image
 def classify(model, image_path):
+    # Add a pre-screener to catch images that are not cauliflower or do not belong to the same category
+    if predict_image(image_path) != "cauliflower":
+        return "Not a cauliflower image", 0.0
 
     finalimage = load(image_path)
     finalimage = tf.reshape(
@@ -46,6 +68,10 @@ def classify(model, image_path):
 
     return label, classified_probability
 
+
+
+
+
 # index page
 @app.route("/")
 def index():
@@ -55,11 +81,11 @@ def index():
 @app.route("/classify", methods=["POST", "GET"])
 def upload_file():
 
-    if request.method != "GET":
+    if request.method == "POST":
         file = request.files["image"]
         upload_image_path = os.path.join(UPLOAD_FOLDER, file.filename)
-        print(upload_image_path)
         file.save(upload_image_path)
+        label = predict_image(upload_image_path)
         label, probability = classify(cauliflower_model, upload_image_path)
         probability = round((probability * 100), 2)
 
@@ -70,6 +96,7 @@ def upload_file():
     return render_template(
         "classify.html", imagefile=file.filename, label=label, prob=probability
     )
+
 
 
 @app.route('/classify/resize_image/<filename>/<int:width>/<int:height>')

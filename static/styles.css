@@ -1,0 +1,23 @@
+/* html,body {
+    margin-right: auto;
+    margin-left: auto;
+    width: 980px;
+} */
+.content {
+    margin-right: auto;
+    margin-left: auto;
+    width: 980px;
+}
+
+#title {
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+#header {
+    padding-bottom: 50px; 
+    margin-bottom: 20px;
+    background-image: linear-gradient(rgba(78, 124, 60), rgba(78, 124, 60),rgba(78, 124, 60),rgba(78, 124, 60),white);
+}

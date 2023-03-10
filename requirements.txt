@@ -1,5 +1,6 @@
 Flask==2.1.1
 numpy==1.21.2
+tensorflow==2.7.0
 asgiref
 astroid==2.4.2
 autopep8==1.5.4
@@ -8,7 +9,6 @@ certifi==2020.12.5
 chardet==4.0.0
 colorama==0.4.3
 cycler==0.10.0
-ecg-qc==1.0b3
 gatspy==0.3
 h5py
 idna==2.10
@@ -23,13 +23,12 @@ olefile
 pathtools==0.1.2
 Pillow
 protobuf==3.15.3
-psycopg2
 pycodestyle==2.6.0
 pylint==2.5.3
 pyparsing==2.4.7
 python-dateutil
 pytz
-PyWavelets==1.1.1
+gunicorn==20.1.0
 requests==2.25.1
 scipy
 shortuuid==1.0.1

@@ -45,4 +45,3 @@ pandas
 joblib~=1.0.1
 scikit-learn~=0.24.1
 plotly~=4.14.3
-Footer

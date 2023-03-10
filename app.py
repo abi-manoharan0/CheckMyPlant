@@ -11,7 +11,7 @@ UPLOAD_FOLDER = "uploads"
 STATIC_FOLDER = "static"
 
 # Load model
-cauliflower_model = tf.keras.models.load_model(STATIC_FOLDER + "/models/" + "Complex_model.h5")
+cauliflower_model = tf.keras.models.load_model(STATIC_FOLDER + "/models/" + "Cauliflower_best_model.h5")
 
 sizeofimage = 256
 

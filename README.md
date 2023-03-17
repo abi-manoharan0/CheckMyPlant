@@ -9,4 +9,5 @@ After submitting the survey, the user is redirected to the upload picture page.
 
 
 
-
+Add this file in \static\models to get the App working on your local machine 
+https://drive.google.com/file/d/1dLFBP482xgp5R8DAR5SxAIpVpAk9wLn2/view?usp=share_link

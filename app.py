@@ -99,24 +99,6 @@ def upload_file():
 
 
 
-@app.route('/classify/resize_image/<filename>/<int:width>/<int:height>')
-def resize_image(filename, width, height):
-    # Load the image
-    file_path = os.path.join(UPLOAD_FOLDER, filename)
-    img = Image.open(file_path)
-
-    # Resize the image
-    img = img.resize((width, height))
-
-    # Save the resized image to a file
-    resized_filename = f"resized_{filename}"
-    img.save(resized_filename)
-
-    # Return the filename of the resized image
-    return resized_filename 
-
-
-
 @app.route("/classify/<filename>")
 def send_file(filename):
     return send_from_directory(UPLOAD_FOLDER, filename)

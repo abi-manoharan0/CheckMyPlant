@@ -1,3 +1,6 @@
+body {
+    font-family: Poppins, sans-serif;
+}
 .content {
     margin-right: auto;
     margin-left: auto;
@@ -33,6 +36,15 @@
     color:rgb(237, 16, 16);
 }
 
+#click-to-check-button {
+    background: rgb(80,161,95);
+    font-size: 31px;
+    font-weight: bold;
+    border-radius: 20px;
+    height: 84.5px;
+    width: 304.663px;
+}
+
 #pred_img {
     height: 500px;
     margin-right: auto;
@@ -40,6 +52,27 @@
     display: block;
 }
 
+.pred_label {
+    font-weight: bold;
+    color:black;
+}
+
 footer {
     background: rgb(80, 161, 95);
+}
+
+.no-border {
+    border: none;
+    border-style: none;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+}
+
+footer .copyright {
+    color: var(--bs-white);
+    height: 22px;
+    padding-top: 7px;
+    font-family: Poppins, sans-serif;
 }

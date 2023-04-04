@@ -17,34 +17,33 @@
         <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-2">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="{{ url_for('index') }}" style="padding-left: 0px;margin-left: 7px;margin-right: 20px;">home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}" style="padding-left: 0px;margin-left: 7px;margin-right: 20px;">home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}" style="margin-right: 20px;">about</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('predict') }}" style="margin-right: 20px;">check!</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ url_for('predict') }}" style="margin-right: 20px;">check!</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <section class="text-center"><img alt="CheckMyPlant Logo" src="{{ url_for('static', filename='img/logo-black.jpg') }}"></section>
-    <section style="background: url(&quot;{{ url_for('static', filename='img/bk01.jpg') }}&quot;) center / cover no-repeat;padding-left: 0px;margin-bottom: 0px;padding-bottom: 518px;height: 594px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4" style="padding-top: 153px;">
-                    <div>&nbsp;</div>
-                </div>
-                <div class="col-md-4 align-items-center align-content-center" style="padding-top: 153px;text-align: center;padding-right: 0px;">
-                    <a class="btn btn-primary btn-lg" id="click-to-check-button" role="button" href="{{ url_for('predict') }}">Click to Check!</a>
-                </div>
-                <div class="col-md-4" style="padding-top: 153px;">
-                    <div>&nbsp;</div>
-                </div>
-            </div>
+    <div class="content">
+        <div class="column is-one-third has-text-centered" style="vertical-align:middle;">
+            <img id="pred_img" alt="Uploaded Image" src="{{ url_for('send_file', filename=imagefile) }}">
         </div>
-    </section>
+        <div class="column is-one-quarter" style="font-size:2.5rem; text-align: center;">
+            <h2 id="pred" style="color:black">
+                This is a <span class="pred-label">{{ label }}</span>
+            </h2>
+            <h2 style="font-size: 3rem">
+                Prediction: <span class="pred-label">{{ prob }}%</span>
+            </h2>
+            <a href="{{ url_for('predict') }}" class="button is-black is-inverted is-outlined" style="font-size:2.5rem; color:rgb(237, 16, 16);">Back</a>
+        </div>
+    </div>
     <footer class="text-center py-4">
         <div class="container">
             <div class="row row-cols-1 row-cols-lg-3">
                 <div class="col">
-                    <ul class="nav nav-tabs" style="border-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;border-left-style: none;">
+                    <ul class="nav nav-tabs"
+                        style="border-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;border-left-style: none;">
                         <li class="nav-item"><a class="nav-link" href="{{ url_for('contact') }}" style="background: rgba(255,255,255,0);color: var(--bs-white);border-style: none;border-top-style: none;">contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url_for('feedback') }}" style="color: var(--bs-white);border-style: none;">feedback</a></li>
                         <li class="nav-item"></li>

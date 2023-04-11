@@ -61,6 +61,12 @@ footer {
     background: rgb(80, 161, 95);
 }
 
+.classify-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 .no-border {
     border: none;
     border-style: none;

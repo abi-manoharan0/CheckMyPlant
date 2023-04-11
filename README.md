@@ -11,3 +11,6 @@ After submitting the survey, the user is redirected to the upload picture page.
 
 Add this file in \static\models to get the App working on your local machine 
 https://drive.google.com/u/0/uc?id=1dLFBP482xgp5R8DAR5SxAIpVpAk9wLn2&export=download
+
+
+This app is also deployed at: http://deebee.ca and http://4.205.105.104/

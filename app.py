@@ -2,7 +2,7 @@
 import os
 import numpy as np
 import tensorflow as tf
-from flask import Flask, render_template, request, url_for, send_from_directory
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 from PIL import Image
 from tensorflow.keras.applications.resnet50 import preprocess_input
 from tensorflow.keras.preprocessing import image
@@ -82,7 +82,7 @@ def contact():
 # Feedback page
 @app.route("/feedback")
 def feedback():
-    return render_template("feedback.html")
+    return redirect("https://forms.office.com/r/FbhU0KprGJ")
 
 # Classify page
 @app.route("/classify", methods=["POST", "GET"])
